@@ -32,9 +32,9 @@ gallery:
 gallery2_heading: 3D print design
 gallery2:
   - image: /assets/images/projects/various/lamp-1.jpg
-    caption: 3D printed lamp · 01 · Curvas parametricas calidas
+    caption: 3D printed lamp · 01 · Translucent warm waves
   - image: /assets/images/projects/various/lamp-2.jpg
-    caption: 3D printed lamp · 02 · Translucent warm waves
+    caption: 3D printed lamp · 02 · Curvas parametricas calidas
 ---
 
 I have created murals both indoors and outdoors, transforming spaces with a unique vibe and style.
