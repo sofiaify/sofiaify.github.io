@@ -29,6 +29,12 @@ gallery:
     caption: Mural · 02 · Cactus garden - Concon, Chile
   - image: /assets/images/projects/various/mural-1.jpg
     caption: Mural · 01 · Hummingbird - Concon, Chile
+gallery2_heading: 3D print design
+gallery2:
+  - image: /assets/images/projects/various/lamp-1.jpg
+    caption: 3D printed lamp · 01
+  - image: /assets/images/projects/various/lamp-2.jpg
+    caption: 3D printed lamp · 02
 ---
 
 I have created murals both indoors and outdoors, transforming spaces with a unique vibe and style.

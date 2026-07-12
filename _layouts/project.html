@@ -115,6 +115,16 @@ layout: default
         </div>
       </div>
       {% endif %}
+
+      {% if page.gallery2 and page.gallery2.size > 0 %}
+      {% assign gstyle2 = page.gallery2_style | default: gstyle %}
+      <div class="row mt-6">
+        <div class="col">
+          {% if page.gallery2_heading %}<h2 class="section-subheading">{{ page.gallery2_heading }}</h2>{% endif %}
+          {% include gallery.html items=page.gallery2 style=gstyle2 %}
+        </div>
+      </div>
+      {% endif %}
     </div>
   </div>
 {% endif %}
