@@ -1,16 +1,24 @@
 {% assign project = include.project %}
-{% if project.date_text %}
-  <div class="project-date">
-    <strong>Date </strong><span>{{ project.date_text }}</span>
-  </div>
-{% endif %}
-{% if project.client %}
-  <div class="project-client">
-    <strong>Client </strong><span>{{ project.client }}</span>
-  </div>
-{% endif %}
-{% if project.role %}
-  <div class="project-role">
-    <strong>Role </strong><span>{{ project.role }}</span>
-  </div>
+{% if project.meta %}
+  {% for item in project.meta %}
+    <div class="project-{{ item.label | slugify }}">
+      <strong>{{ item.label }} </strong><span>{{ item.value }}</span>
+    </div>
+  {% endfor %}
+{% else %}
+  {% if project.date_text %}
+    <div class="project-date">
+      <strong>Date </strong><span>{{ project.date_text }}</span>
+    </div>
+  {% endif %}
+  {% if project.client %}
+    <div class="project-client">
+      <strong>Client </strong><span>{{ project.client }}</span>
+    </div>
+  {% endif %}
+  {% if project.role %}
+    <div class="project-role">
+      <strong>Role </strong><span>{{ project.role }}</span>
+    </div>
+  {% endif %}
 {% endif %}

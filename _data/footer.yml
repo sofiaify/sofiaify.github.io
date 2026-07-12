@@ -1,14 +1,14 @@
 # Footer menu columns. Each column has a title and a list of links.
-- title: Our Projects
+- title: Projects
   links:
-    - name: Project 1
-      url: /projects/project-1/
-    - name: Project 2
-      url: /projects/project-2/
-    - name: Project 3
-      url: /projects/project-3/
-    - name: Project 4
-      url: /projects/project-4/
+    - name: Analog Photography
+      url: /projects/photography/
+    - name: Watercolor
+      url: /projects/watercolor/
+    - name: Digital Art
+      url: /projects/digital-art/
+    - name: Various
+      url: /projects/various/
 - title: Company
   links:
     # Blog is disabled for now — uncomment to re-enable.

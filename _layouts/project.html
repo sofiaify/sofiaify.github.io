@@ -18,7 +18,7 @@ layout: default
           </div>
         </div>
         <div class="col-12 col-md-6 mt-6 mt-md-0">
-          {% include gallery.html items=page.gallery style=gstyle %}
+          {% if page.gallery and page.gallery.size > 0 %}{% include gallery.html items=page.gallery style=gstyle %}{% endif %}
         </div>
       </div>
     </div>
@@ -31,7 +31,7 @@ layout: default
     <div class="container">
       <div class="row">
         <div class="col-12 col-md-6 mb-6 mb-md-0">
-          {% include gallery.html items=page.gallery style=gstyle %}
+          {% if page.gallery and page.gallery.size > 0 %}{% include gallery.html items=page.gallery style=gstyle %}{% endif %}
         </div>
         <div class="col-12 col-md-6">
           <div class="project-heading"><h1>{{ page.title }}</h1></div>
@@ -44,16 +44,11 @@ layout: default
   </div>
 
 {% elsif style == 'top' %}
-  {% comment %} Layout 4 - two column gallery on top, details + content below {% endcomment %}
-  {% assign gstyle = page.gallery_style | default: 'two-column' %}
+  {% comment %} Layout 4 - content/details on top, gallery below {% endcomment %}
+  {% assign gstyle = page.gallery_style | default: 'centered' %}
   <div class="section">
     <div class="container">
       <div class="row mb-6">
-        <div class="col">
-          {% include gallery.html items=page.gallery style=gstyle %}
-        </div>
-      </div>
-      <div class="row">
         <div class="col-12 col-md-6">
           <div class="project-heading"><h1>{{ page.title }}</h1></div>
           {% include project-categories.html project=page %}
@@ -63,11 +58,32 @@ layout: default
           <div class="content">{{ content }}</div>
         </div>
       </div>
+      {% if page.gallery and page.gallery.size > 0 %}
+      <div class="row">
+        <div class="col">
+          {% if page.gallery_heading %}<h2 class="section-subheading">{{ page.gallery_heading }}</h2>{% endif %}
+          {% include gallery.html items=page.gallery style=gstyle %}
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+{% elsif style == 'custom' %}
+  {% comment %} Layout custom — everything handled in {{ content }} {% endcomment %}
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          {% include project-categories.html project=page %}
+          <div class="content">{{ content }}</div>
+        </div>
+      </div>
     </div>
   </div>
 
 {% else %}
-  {% comment %} Layout 1 (default) - details left, content right, masonry gallery below {% endcomment %}
+  {% comment %} Layout 1 (default) - details left, content right, carousel + gallery below {% endcomment %}
   {% assign gstyle = page.gallery_style | default: 'masonry' %}
   <div class="section">
     <div class="container">
@@ -81,11 +97,24 @@ layout: default
           <div class="content">{{ content }}</div>
         </div>
       </div>
+
+      {% if page.carousel %}
+      <div class="row mb-6">
+        <div class="col">
+          {% if page.carousel_heading %}<h2 class="section-subheading">{{ page.carousel_heading }}</h2>{% endif %}
+          {% include carousel.html items=page.carousel id="dossier" %}
+        </div>
+      </div>
+      {% endif %}
+
+      {% if page.gallery and page.gallery.size > 0 %}
       <div class="row">
         <div class="col">
+          {% if page.gallery_heading %}<h2 class="section-subheading">{{ page.gallery_heading }}</h2>{% endif %}
           {% include gallery.html items=page.gallery style=gstyle %}
         </div>
       </div>
+      {% endif %}
     </div>
   </div>
 {% endif %}

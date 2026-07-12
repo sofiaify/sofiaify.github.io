@@ -5,7 +5,9 @@
     <div class="gallery-item">
       <div class="gallery-image"><img src="{{ item.image | relative_url }}"/></div>
       {% if item.caption %}
+        <hr class="gallery-separator" />
         <div class="gallery-caption">{{ item.caption }}</div>
+        <hr class="gallery-separator" />
       {% endif %}
     </div>
   {% endfor %}
@@ -15,12 +17,14 @@
 <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
 <script>
   var grid = document.querySelector('.gallery-masonry');
-  var msnry;
-  imagesLoaded(grid, function () {
-    msnry = new Masonry(grid, {
-      itemSelector: '.gallery-item',
-      percentPosition: true,
+  if (grid) {
+    var msnry;
+    imagesLoaded(grid, function () {
+      msnry = new Masonry(grid, {
+        itemSelector: '.gallery-item',
+        percentPosition: true,
+      });
     });
-  });
+  }
 </script>
 {% endif %}

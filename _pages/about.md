@@ -1,51 +1,24 @@
 ---
-layout: page
-title: About Us
+layout: about
+title: About
 body_class: basic
-description: Business plan hackathon handshake responsive web design.
-image: /assets/images/gen/content/content-5.webp
+description: Self-taught artist and industrial engineer from Chile.
+image: /assets/images/about/about.jpg
 ---
 
-# Creating Modern Websites
+My name is Sofía Fuentes. I'm 29 years old and graduated as an Industrial Engineer from PUC in Chile. I'm a self-taught artist who loves painting, making mosaics and experimenting across many mediums.
 
-Web design encompasses many different skills and disciplines in the production and maintenance of websites.
+## How I work
 
-Often many individuals will work in teams covering different aspects of the design process, although some designers will cover them all. Web design partially overlaps web engineering in the broader scope of web development.
+My practice moves between four connected worlds:
 
-## What is Web Design?
+- **Analog photography** — shot on 35 mm film with a camera from the 1970s that travels everywhere with me.
+- **Watercolor** — a technique I've explored since 2020 to express feelings, relax and reconnect with myself.
+- **Digital art** — a fast, accessible way to create modern pieces and bring in design elements.
+- **Various** — murals and collaborations that take my work off the page and into real spaces.
 
-User experience is about how a user interacts with, and experiences, a particular product, system or service. As a UX designer, you should consider the Why, What and How of product use.
+## A little more
 
-<figure>
-  <a href="https://figma.com" target="_blank">
-    <img src="/assets/images/gen/content/content-1.webp" alt="Photo of designing a website in Figma" />
-  </a>
-  <figcaption>
-    <h4>Steve Francia</h4>
-    <p>Designing in Figma</p>
-  </figcaption>
-</figure>
+I began exploring watercolors in 2020 and discovered a way of painting that helps me slow down and connect with myself. A few years later I fell in love with analog photography, and with the whole process behind it — from choosing the moment to developing the film.
 
-## Front-end Development
-
-The What addresses the things people can do with a product—its functionality. Finally, the How relates to the design of functionality in an accessible and aesthetically pleasant way. UX designers start with the Why before determining the What and then, finally, the How in order to create products that users can form meaningful experiences with.
-
-> As a UX designer, you should consider the Why, What and How of product use.
-
-Web designers are expected to have an awareness of usability and if their role involves creating markup then they are also expected to be up to date with web accessibility guidelines.
-
-## Design Systems
-
-A Design System is a set of interconnected patterns and shared practices coherently organized to aid in digital product design and development of products such as apps or websites.
-
-## Process
-
-There are two primary jobs involved in creating a website: the web designer and web developer, who often work closely together on a website.
-
-- User experience research
-- Visual design and illustration
-- Programming and coding
-
-![Design In Figma](/assets/images/gen/content/content-2.webp)
-
-Web designers will also have a working knowledge of markup languages such as HTML and CSS, although the extent of their knowledge will differ from one web designer to another.
+More recently I've embraced digital art and muralism, transforming indoor and outdoor spaces with a style of their own, and helping tell other artists' stories through branding and design.

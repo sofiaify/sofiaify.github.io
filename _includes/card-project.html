@@ -11,9 +11,10 @@
         <a href="{{ project.url | relative_url }}">{{ project.title }}</a>
       </h2>
     </div>
-    {% if project.client %}
+    {% assign subtitle = project.subtitle | default: project.client %}
+    {% if subtitle %}
       <div class="card-client">
-        {{ project.client }}
+        {{ subtitle }}
       </div>
     {% endif %}
   </div>

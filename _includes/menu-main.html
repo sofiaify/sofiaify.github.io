@@ -17,8 +17,16 @@
               {% assign subactive = "" %}
               {% if cur == sub.url %}{% assign subactive = "active" %}{% endif %}
               <a href="{{ sub.url | relative_url }}" class="dropdown-item {{ subactive }}">
-                {% if sub.icon %}<div class="dropdown-item-icon"><img src="{{ sub.icon | relative_url }}" /></div>{% endif %}
-                {% if sub.icon_invert %}<div class="dropdown-item-icon icon-invert"><img src="{{ sub.icon_invert | relative_url }}" /></div>{% endif %}
+                {% if sub.icon %}
+                  <div class="dropdown-item-icon"><img src="{{ sub.icon | relative_url }}" /></div>
+                {% elsif sub.fa_icon %}
+                  <div class="dropdown-item-icon"><i class="fa-solid {{ sub.fa_icon }}"></i></div>
+                {% endif %}
+                {% if sub.icon_invert %}
+                  <div class="dropdown-item-icon icon-invert"><img src="{{ sub.icon_invert | relative_url }}" /></div>
+                {% elsif sub.fa_icon %}
+                  <div class="dropdown-item-icon icon-invert"><i class="fa-solid {{ sub.fa_icon }}"></i></div>
+                {% endif %}
                 <div class="dropdown-item-content">
                   <div class="dropdown-item-name">{{ sub.name }}</div>
                   {% if sub.description %}<div class="dropdown-item-description">{{ sub.description }}</div>{% endif %}

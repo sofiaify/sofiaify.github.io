@@ -1,26 +1,8 @@
 # Social links shown in the header, mobile menu and footer.
 # `icon` is a Font Awesome brand class.
-- title: Twitter
-  icon: fa-twitter
-  url: https://www.twitter.com
-- title: Github
-  icon: fa-github
-  url: https://www.github.com
-- title: Discord
-  icon: fa-discord
-  url: https://www.discord.com
-- title: Tiktok
-  icon: fa-tiktok
-  url: https://www.tiktok.com
-- title: Facebook
-  icon: fa-facebook-square
-  url: https://www.facebook.com
 - title: Instagram
   icon: fa-instagram-square
-  url: https://www.instagram.com
+  url: https://www.instagram.com/__pintoresca
 - title: Linkedin
   icon: fa-linkedin
-  url: https://www.linkedin.com
-- title: Mailchimp
-  icon: fa-mailchimp
-  url: https://www.mailchimp.com
+  url: https://www.linkedin.com/in/sofiaify

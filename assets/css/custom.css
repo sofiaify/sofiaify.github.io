@@ -1,0 +1,222 @@
+/* ==========================================================================
+   Custom overrides — loaded after main.css
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Project cover cards — fill the 16:9 card with the cover image
+   -------------------------------------------------------------------------- */
+.card-project .card-thumbnail img {
+  object-fit: cover !important;
+}
+
+/* --------------------------------------------------------------------------
+   Project galleries — centered single-column (show whole image, centered)
+   -------------------------------------------------------------------------- */
+.page-project .gallery-item {
+  text-align: center;
+}
+.page-project .gallery .gallery-item .gallery-image img {
+  display: block;
+  margin: 0 auto;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  min-height: 400px;
+  max-height: 70vh;
+}
+.page-project .gallery-single-column {
+  justify-items: center;
+}
+
+/* Centered style — one image per row, centered, spaced */
+.page-project .gallery-centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page-project .gallery-centered .gallery-item {
+  text-align: center;
+  width: 100%;
+}
+.page-project .gallery-centered .gallery-item .gallery-image img {
+  display: block;
+  margin: 0 auto;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 70vh;
+}
+.gallery-centered .gallery-item .gallery-image {
+  text-align: center;
+}
+
+/* Separator lines around captions */
+.gallery-separator {
+  border: 0;
+  border-top: 1px solid var(--color-base-text-3, #dee2e6);
+  max-width: 120px;
+  margin: 24px auto;
+}
+
+/* Caption text — centered, spaced */
+.page-project .gallery .gallery-item .gallery-caption {
+  text-align: center;
+  font-size: 15px;
+  color: var(--color-base-text-2, #6c757d);
+}
+
+/* --------------------------------------------------------------------------
+   3-image row with single caption (digital art)
+   -------------------------------------------------------------------------- */
+.gallery-3row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  margin-top: 48px;
+}
+.gallery-3row .gallery-3row-item {
+  flex: 1 1 200px;
+  max-width: 32%;
+  text-align: center;
+}
+.gallery-3row .gallery-3row-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+}
+
+/* Single caption under the 3-image row */
+.gallery-3row-caption {
+  text-align: center;
+  font-size: 15px;
+  color: var(--color-base-text-2, #6c757d);
+  margin-top: 18px;
+}
+
+/* Two-column: don't crop — show whole images, capped to the screen */
+.page-project .gallery-two-column {
+  grid-auto-rows: auto !important;
+}
+.page-project .gallery-two-column .gallery-item {
+  overflow: visible;
+}
+.page-project .gallery-two-column .gallery-item .gallery-image img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+   max-height: 70vh;
+  object-fit: contain;
+}
+
+/* Hero / heading images never exceed the screen height, centered */
+.heading .heading-image img {
+  max-height: 70vh;
+  width: auto;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Section subheadings used between galleries */
+.section-subheading {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+/* Dropdown FA icons sizing */
+.dropdown-menu .dropdown-item-icon i {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+/* --------------------------------------------------------------------------
+   Carousel
+   -------------------------------------------------------------------------- */
+.carousel {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+.carousel-track {
+  position: relative;
+}
+.carousel-slide {
+  display: none;
+}
+.carousel-slide.is-active {
+  display: block;
+}
+.carousel-slide img {
+  display: block;
+  margin: 0 auto;
+  width: auto;
+  max-width: 100%;
+  max-height: 70vh;
+  border-radius: 4px;
+}
+.carousel-caption {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--color-base-text-2, #6c757d);
+}
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: background 0.2s ease;
+}
+.carousel-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+.carousel-prev {
+  left: 12px;
+}
+.carousel-next {
+  right: 12px;
+}
+.carousel-dots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 16px;
+}
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--color-base-text, #212529);
+  opacity: 0.3;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+.carousel-dot.is-active {
+  opacity: 1;
+}

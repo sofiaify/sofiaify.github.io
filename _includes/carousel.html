@@ -1,0 +1,21 @@
+{% assign items = include.items %}
+{% assign cid = include.id | default: 'carousel' %}
+<div class="carousel" id="{{ cid }}" data-carousel>
+  <div class="carousel-track">
+    {% for item in items %}
+      <div class="carousel-slide{% if forloop.first %} is-active{% endif %}">
+        <div class="carousel-image">
+          <img src="{{ item.image | relative_url }}" alt="{{ item.caption | default: include.alt }}"/>
+        </div>
+        {% if item.caption %}<div class="carousel-caption">{{ item.caption }}</div>{% endif %}
+      </div>
+    {% endfor %}
+  </div>
+  <button class="carousel-btn carousel-prev" type="button" aria-label="Previous slide">&#8249;</button>
+  <button class="carousel-btn carousel-next" type="button" aria-label="Next slide">&#8250;</button>
+  <div class="carousel-dots">
+    {% for item in items %}
+      <button class="carousel-dot{% if forloop.first %} is-active{% endif %}" type="button" data-index="{{ forloop.index0 }}" aria-label="Go to slide {{ forloop.index }}"></button>
+    {% endfor %}
+  </div>
+</div>

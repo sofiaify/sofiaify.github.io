@@ -7,6 +7,6 @@ form_action: https://formspree.io/f/yourformid
 
 ## Contact Info
 
-- **Email:** [example@example.com](mailto:example@example.com)
-- **Phone:** +61 0417 123 XXX
-- **Address:** Clem Jones Promenade, South Brisbane QLD 4101
+- **Email:** [sofiaify@gmail.com](mailto:sofiaify@gmail.com)
+- **Phone:** +49 176 67001931
+- **Address:** Munich, Germany

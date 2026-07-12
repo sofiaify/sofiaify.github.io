@@ -1,10 +1,10 @@
 # -----------------------------------------------------------------------------
 # Site settings
 # -----------------------------------------------------------------------------
-title: Curate
-tagline: Premium Portfolio Theme
-description: A markdown powered portfolio theme for Jekyll.
-author: Your Name
+title: Sofía Fuentes
+tagline: Artist & Engineer
+description: The portfolio of Sofía Fuentes — analog photography, watercolor, digital art and more.
+author: Sofía Fuentes
 email: example@example.com
 
 # The base hostname & protocol for your site, used to build absolute URLs.
@@ -23,8 +23,8 @@ twitter_username: yourhandle
 # Footer / branding
 # -----------------------------------------------------------------------------
 footer:
-  title: Curate
-  description: Curate is a creative portfolio built with Jekyll.
+  title: Sofía Fuentes
+  description: A creative portfolio of analog photography, watercolor and digital art.
 
 # -----------------------------------------------------------------------------
 # Collections
@@ -84,3 +84,4 @@ exclude:
   - README.md
   - vendor
   - .github
+  - dump
