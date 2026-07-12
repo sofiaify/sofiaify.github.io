@@ -1,0 +1,10 @@
+{% assign project = include.project %}
+{% if project.categories and project.categories.size > 0 %}
+  <div class="project-categories">
+    {% for category in project.categories %}
+      <div class="category-link">
+        <a href="{{ '/projects/' | relative_url }}">{{ category | capitalize }}</a>
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}

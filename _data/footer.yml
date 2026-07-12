@@ -1,0 +1,18 @@
+# Footer menu columns. Each column has a title and a list of links.
+- title: Our Projects
+  links:
+    - name: Project 1
+      url: /projects/project-1/
+    - name: Project 2
+      url: /projects/project-2/
+    - name: Project 3
+      url: /projects/project-3/
+    - name: Project 4
+      url: /projects/project-4/
+- title: Company
+  links:
+    # Blog is disabled for now — uncomment to re-enable.
+    # - name: Blog
+    #   url: /blog/
+    - name: About
+      url: /about/

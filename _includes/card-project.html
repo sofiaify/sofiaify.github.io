@@ -1,0 +1,20 @@
+{% assign project = include.project %}
+<div class="card card-project card-column card-has-thumbnail ">
+  {% if project.thumbnail %}
+    <div class="card-thumbnail ">
+      <a href="{{ project.url | relative_url }}"><img alt="{{ project.title }}" src="{{ project.thumbnail | relative_url }}"/></a>
+    </div>
+  {% endif %}
+  <div class="card-content">
+    <div class="card-title">
+      <h2>
+        <a href="{{ project.url | relative_url }}">{{ project.title }}</a>
+      </h2>
+    </div>
+    {% if project.client %}
+      <div class="card-client">
+        {{ project.client }}
+      </div>
+    {% endif %}
+  </div>
+</div>

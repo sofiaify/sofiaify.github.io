@@ -1,0 +1,36 @@
+<div class="footer">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-12 col-md-4">
+        <div class="footer-info">
+          <h2>{{ site.footer.title | default: site.title }}</h2>
+          {% if site.footer.description %}<p>{{ site.footer.description }}</p>{% endif %}
+        </div>
+        {% include social.html %}
+      </div>
+
+      <div class="col-12 col-md-8 mt-gutter mt-md-0">
+        <div class="row justify-content-end">
+          {% for col in site.data.footer %}
+            <div class="col-12 col-md-3 mt-gutter mt-md-0">
+              <div class="footer-menu">
+                <h3>{{ col.title }}</h3>
+                <div class="menu-footer">
+                  <ul>
+                    {% for link in col.links %}
+                      <li class="{% if page.url == link.url %}active{% endif %}">
+                        <a href="{{ link.url | relative_url }}">{{ link.name }}</a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

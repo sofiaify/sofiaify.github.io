@@ -1,0 +1,53 @@
+---
+layout: default
+---
+<div class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        {% include heading.html title=page.heading description=page.subheading align="left" %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section pt-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="grid-header grid-header-align-left"></div>
+      </div>
+
+      {% assign projects = site.projects | sort: "weight" %}
+      {% assign count = page.featured_projects | default: 4 %}
+      {% for project in projects limit: count %}
+        <div class="col-12 col-md-6 col-lg-6 mb-gutter mt-gutter mt-md-0">
+          {% include card-project.html project=project %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% comment %} Recent Posts — disabled while the blog is off. Uncomment to re-enable.
+<div class="section section-base-bg-2">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="grid-header grid-header-align-left">
+          <h2>{{ page.posts_heading | default: "Recent Posts" }}</h2>
+        </div>
+      </div>
+
+      {% assign post_count = page.featured_posts | default: 3 %}
+      {% for post in site.posts limit: post_count %}
+        <div class="col-12 col-md-4 col-lg-4 mb-3 mb-md-6">
+          {% include card-post.html post=post %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endcomment %}
+
+{% include subscribe.html %}

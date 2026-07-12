@@ -1,0 +1,91 @@
+---
+layout: default
+---
+{% assign style = page.style | default: 'default' %}
+
+{% if style == 'right' %}
+  {% comment %} Layout 2 - content left, single column gallery right {% endcomment %}
+  {% assign gstyle = page.gallery_style | default: 'single-column' %}
+  <div class="section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-6">
+          <div class="project-heading"><h1>{{ page.title }}</h1></div>
+          {% include project-categories.html project=page %}
+          <div class="content">{{ content }}</div>
+          <div class="project-stats">
+            {% include project-details.html project=page %}
+          </div>
+        </div>
+        <div class="col-12 col-md-6 mt-6 mt-md-0">
+          {% include gallery.html items=page.gallery style=gstyle %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% elsif style == 'left' %}
+  {% comment %} Layout 3 - single column gallery left, content right {% endcomment %}
+  {% assign gstyle = page.gallery_style | default: 'single-column' %}
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6 mb-6 mb-md-0">
+          {% include gallery.html items=page.gallery style=gstyle %}
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="project-heading"><h1>{{ page.title }}</h1></div>
+          {% include project-categories.html project=page %}
+          <div class="content">{{ content }}</div>
+          {% include project-details.html project=page %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% elsif style == 'top' %}
+  {% comment %} Layout 4 - two column gallery on top, details + content below {% endcomment %}
+  {% assign gstyle = page.gallery_style | default: 'two-column' %}
+  <div class="section">
+    <div class="container">
+      <div class="row mb-6">
+        <div class="col">
+          {% include gallery.html items=page.gallery style=gstyle %}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <div class="project-heading"><h1>{{ page.title }}</h1></div>
+          {% include project-categories.html project=page %}
+          {% include project-details.html project=page %}
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="content">{{ content }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% else %}
+  {% comment %} Layout 1 (default) - details left, content right, masonry gallery below {% endcomment %}
+  {% assign gstyle = page.gallery_style | default: 'masonry' %}
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6 mb-4">
+          <div class="project-heading"><h1>{{ page.title }}</h1></div>
+          {% include project-categories.html project=page %}
+          {% include project-details.html project=page %}
+        </div>
+        <div class="col-12 col-md-6 mb-4">
+          <div class="content">{{ content }}</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          {% include gallery.html items=page.gallery style=gstyle %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}

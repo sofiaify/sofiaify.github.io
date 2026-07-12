@@ -1,0 +1,16 @@
+{% assign project = include.project %}
+{% if project.date_text %}
+  <div class="project-date">
+    <strong>Date </strong><span>{{ project.date_text }}</span>
+  </div>
+{% endif %}
+{% if project.client %}
+  <div class="project-client">
+    <strong>Client </strong><span>{{ project.client }}</span>
+  </div>
+{% endif %}
+{% if project.role %}
+  <div class="project-role">
+    <strong>Role </strong><span>{{ project.role }}</span>
+  </div>
+{% endif %}

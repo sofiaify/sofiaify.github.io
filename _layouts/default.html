@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}">
+  {% include head.html %}
+<body class="page page-{{ page.body_class | default: 'basic' }} has-static-header">
+
+{% include mobile-menu.html %}
+{% include header.html %}
+
+<div id="wrapper" class="wrapper">
+  {{ content }}
+</div>
+
+{% include footer.html %}
+
+<script type="text/javascript" src="{{ '/assets/js/scripts.js' | relative_url }}"></script>
+<script type="text/javascript" src="{{ '/assets/js/hamburger.js' | relative_url }}"></script>
+<script type="text/javascript" src="{{ '/assets/js/darkModeSwitch.js' | relative_url }}"></script>
+
+</body>
+</html>

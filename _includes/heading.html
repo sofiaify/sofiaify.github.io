@@ -1,0 +1,17 @@
+<div class="heading heading-{{ include.align | default: 'left' }}">
+  {% if include.title %}
+    <div class="heading-heading">
+      <h1>{{ include.title }}</h1>
+    </div>
+  {% endif %}
+  {% if include.description %}
+    <div class="heading-description">
+      <p>{{ include.description }}</p>
+    </div>
+  {% endif %}
+  {% if include.image %}
+    <div class="heading-image">
+      <img alt="{{ include.title }}" src="{{ include.image | relative_url }}"/>
+    </div>
+  {% endif %}
+</div>

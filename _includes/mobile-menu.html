@@ -1,0 +1,29 @@
+<div class="menu-main-mobile " id="menu-main-mobile">
+  <div class="menu-main-mobile-top">
+    <div id="close-overlay" class="menu-main-close">
+      <div class="hamburger"></div>
+    </div>
+  </div>
+
+  <div class="menu-main-mobile-center">
+    <ul class="menu">
+      {% assign cur = page.url %}
+      {% for item in site.data.navigation %}
+        {% assign active = "" %}
+        {% if item.url == "/" %}
+          {% if cur == "/" %}{% assign active = "active" %}{% endif %}
+        {% else %}
+          {% if cur contains item.url %}{% assign active = "active" %}{% endif %}
+        {% endif %}
+        <li class="menu-item-{{ item.name | slugify }} {{ active }}">
+          <a href="{{ item.url | relative_url }}">{{ item.name }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="menu-main-mobile-bottom">
+    {% include social.html %}
+    {% include dark-mode-switch.html %}
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<head>
+  <meta charset="utf-8">
+  <meta content="ie=edge" http-equiv="x-ua-compatible">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+
+  <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }} - {{ site.tagline }}{% endif %}</title>
+
+  {% seo title=false %}
+
+  <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
+  <link rel="icon" href="{{ '/assets/images/favicon/favicon.png' | relative_url }}">
+
+  <link href="{{ '/assets/css/main.css' | relative_url }}" rel="stylesheet">
+
+  <script>
+    localStorage.getItem('darkMode') === 'true' && document.documentElement.setAttribute('data-bs-theme', 'dark');
+  </script>
+
+  <link href="{{ '/assets/css/fonts.css' | relative_url }}" rel="stylesheet">
+</head>

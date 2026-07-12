@@ -1,0 +1,37 @@
+<div class="menu-main">
+  <ul>
+    {% assign cur = page.url %}
+    {% for item in site.data.navigation %}
+      {% assign active = "" %}
+      {% if item.url == "/" %}
+        {% if cur == "/" %}{% assign active = "active" %}{% endif %}
+      {% else %}
+        {% if cur contains item.url %}{% assign active = "active" %}{% endif %}
+      {% endif %}
+
+      {% if item.dropdown %}
+        <li class="menu-item-dropdown menu-item-{{ item.name | slugify }} {{ active }}">
+          <a href="{{ item.url | relative_url }}">{{ item.name }} <i class="fa-solid fa-chevron-down"></i></a>
+          <div class="dropdown-menu">
+            {% for sub in item.dropdown %}
+              {% assign subactive = "" %}
+              {% if cur == sub.url %}{% assign subactive = "active" %}{% endif %}
+              <a href="{{ sub.url | relative_url }}" class="dropdown-item {{ subactive }}">
+                {% if sub.icon %}<div class="dropdown-item-icon"><img src="{{ sub.icon | relative_url }}" /></div>{% endif %}
+                {% if sub.icon_invert %}<div class="dropdown-item-icon icon-invert"><img src="{{ sub.icon_invert | relative_url }}" /></div>{% endif %}
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">{{ sub.name }}</div>
+                  {% if sub.description %}<div class="dropdown-item-description">{{ sub.description }}</div>{% endif %}
+                </div>
+              </a>
+            {% endfor %}
+          </div>
+        </li>
+      {% else %}
+        <li class="{{ active }}">
+          <a href="{{ item.url | relative_url }}">{{ item.name }}</a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>

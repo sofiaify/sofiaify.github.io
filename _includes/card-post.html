@@ -1,0 +1,30 @@
+{% assign post = include.post %}
+{% assign style = include.style | default: 'column' %}
+<div class="card card-post card-{{ style }} {% if post.thumbnail %}card-has-thumbnail{% endif %} ">
+  {% if post.thumbnail %}
+    <div class="card-thumbnail ">
+      <a href="{{ post.url | relative_url }}"><img alt="{{ post.title }}" src="{{ post.thumbnail | relative_url }}"/></a>
+    </div>
+  {% endif %}
+  <div class="card-content">
+    {% if include.show_meta %}
+      <div class="card-meta">
+        <div class="card-date">
+          <span class="post-date-date">{{ post.date | date: "%-d %B %Y" }}</span>
+        </div>
+      </div>
+    {% endif %}
+
+    <div class="card-title">
+      <h3>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </h3>
+    </div>
+
+    {% if post.description %}
+      <div class="card-description">
+        <p>{{ post.description }}</p>
+      </div>
+    {% endif %}
+  </div>
+</div>

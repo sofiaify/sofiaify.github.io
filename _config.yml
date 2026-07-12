@@ -1,0 +1,86 @@
+# -----------------------------------------------------------------------------
+# Site settings
+# -----------------------------------------------------------------------------
+title: Curate
+tagline: Premium Portfolio Theme
+description: A markdown powered portfolio theme for Jekyll.
+author: Your Name
+email: example@example.com
+
+# The base hostname & protocol for your site, used to build absolute URLs.
+# For GitHub Pages project sites set url + baseurl accordingly, e.g.
+#   url: "https://username.github.io"
+#   baseurl: "/repository-name"
+url: ""
+baseurl: ""
+
+lang: en
+
+# Social links used in the header/footer (see _data/social.yml)
+twitter_username: yourhandle
+
+# -----------------------------------------------------------------------------
+# Footer / branding
+# -----------------------------------------------------------------------------
+footer:
+  title: Curate
+  description: Curate is a creative portfolio built with Jekyll.
+
+# -----------------------------------------------------------------------------
+# Collections
+# -----------------------------------------------------------------------------
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+  pages:
+    output: true
+    permalink: /:name/
+
+# -----------------------------------------------------------------------------
+# Defaults
+# -----------------------------------------------------------------------------
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+
+# Posts permalink -> clean /blog/:title/ URLs
+permalink: /blog/:title/
+
+# -----------------------------------------------------------------------------
+# Pagination (jekyll-paginate v1, GitHub Pages compatible)
+# -----------------------------------------------------------------------------
+paginate: 6
+paginate_path: "/blog/page/:num"
+
+# -----------------------------------------------------------------------------
+# Build settings
+# -----------------------------------------------------------------------------
+markdown: kramdown
+highlighter: rouge
+
+plugins:
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - .github

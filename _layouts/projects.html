@@ -1,0 +1,29 @@
+---
+layout: default
+---
+<div class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        {% include heading.html title=page.title description=page.description align="left" %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section pt-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="grid-header grid-header-align-left"></div>
+      </div>
+
+      {% assign projects = site.projects | sort: "weight" %}
+      {% for project in projects %}
+        <div class="col-12 col-md-6 col-lg-3 mb-gutter mt-gutter mt-md-0">
+          {% include card-project.html project=project %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
