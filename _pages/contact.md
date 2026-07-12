@@ -9,4 +9,4 @@ form_action: https://formspree.io/f/yourformid
 
 - **Email:** [sofiaify@gmail.com](mailto:sofiaify@gmail.com)
 - **Phone:** +49 176 67001931
-- **Address:** Munich, Germany
+- Munich, Germany

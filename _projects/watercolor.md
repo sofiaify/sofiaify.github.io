@@ -29,6 +29,6 @@ gallery:
     caption: Watercolor · 06 · Martin Pescador
 ---
 
-I am a self-taught artist who enjoys painting, creating mosaics and much more. I began exploring watercolors in 2020 and discovered a technique that lets me express my feelings while helping me relax and connect with myself.
+I began exploring watercolors in 2020 and discovered a technique that lets me express my feelings while helping me relax and connect with myself.
 
 Each piece is a small, unhurried conversation between water, pigment and paper.
