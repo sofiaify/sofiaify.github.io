@@ -32,11 +32,14 @@ gallery:
 gallery2_heading: 3D print design
 gallery2:
   - image: /assets/images/projects/various/lamp-1.jpg
-    caption: 3D printed lamp · 01
+    caption: 3D printed lamp · 01 · Curvas parametricas calidas
   - image: /assets/images/projects/various/lamp-2.jpg
-    caption: 3D printed lamp · 02
+    caption: 3D printed lamp · 02 · Translucent warm waves
 ---
 
 I have created murals both indoors and outdoors, transforming spaces with a unique vibe and style.
 
 I also helped develop a brand for my mom, an artisan who works with vegetal fibers to create art. The dossier below tells her story through her creations and motivations.
+
+Finally, last year I started creating lamps with a variety of shapes, colours and textures.
+
